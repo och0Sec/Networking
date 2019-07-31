@@ -1,0 +1,15 @@
+---
+# Collect all facts from the device
+- name: Getting Started
+  connection: network_cli
+  gather_facts: false
+  hosts: all
+  
+  tasks:
+    - name: Get Config
+      ios_facts:
+       gather_subset: all
+
+    - name: Display
+      debug:
+       msg: "The Hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
