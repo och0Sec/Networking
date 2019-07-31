@@ -11,7 +11,7 @@ cisco_1921 = {
     'port' : 22,          # optional, defaults to 22
     'secret': 'secret',     # optional, defaults to ''
 }
-
+#Looks for a file called config
 with open('config') as f:
     lines = f.read().splitlines()
 #print lines #Optional, prints each line to be pushed to router
@@ -20,4 +20,4 @@ output = net_connect.send_config_set(lines)
 print output 
 
 net_connect.disconnect()
-Print ("Status: Successful!")
+print ("Status: Successful!")
