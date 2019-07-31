@@ -15,7 +15,7 @@ cisco_1921 = {
     'username': username,
     'password': password,
     'port' : 22,          # optional, defaults to 22
-    'secret': '##F1rst##F1rst',     # optional, defaults to ''
+    'secret': 'secret',     # optional, defaults to ''
 }
 
 net_connect = ConnectHandler(**cisco_1921)
