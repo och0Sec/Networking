@@ -1,7 +1,7 @@
 #Author: Oto Ricardo
 #Date: 7/31/19
 #pingFromRemoteHost.py 
-#SSH into a remote cisco router and ping a know hard-codede IP, returns the output from remote cisco router.
+#SSH into a remote cisco router and ping a known hard-codede IP, returns the output from remote cisco router.
 
 from netmiko import ConnectHandler
 import getpass
