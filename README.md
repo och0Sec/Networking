@@ -1,7 +1,7 @@
 # Networking
 Networking Scripts
 # How to install Ansible:
-apt-get update
+apt-get update\n
 apt-get install software-properties-common
 apt-add-repository ppa:ansible/ansible
 press "enter" to confirm the addition of repository
