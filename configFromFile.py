@@ -1,5 +1,10 @@
 !/usr/bin/env python
 
+#Author: Oto Ricardo
+#Date: 7/31/19
+#configFromFile.py
+#SSH into a remote cisco router and pushes configuration from a file, returns the config pushed from remote cisco router.
+
 from netmiko import ConnectHandler
 from getpass import getpass
 
