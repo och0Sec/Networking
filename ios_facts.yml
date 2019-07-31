@@ -1,4 +1,5 @@
 ---
+#to run it: ansible-playbook -i hostsFile -u userName -k -e ansible_network_os=ios ios_facts.yml
 # Collect all facts from the device
 - name: Getting Started
   connection: network_cli
