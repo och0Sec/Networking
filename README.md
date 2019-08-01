@@ -27,3 +27,8 @@ pip install cryptography
 pip install paramiko
 or
 pip install netmiko
+
+#Install Netmiko for Python 3
+sudo apt-get update -y
+
+sudo apt-get install -y python3-netmiko
