@@ -1,5 +1,5 @@
 How to upgrade firmware on SG350 Switch
-POSTED ON 02/12/2019
+
 1. Download latest firmware from https://software.cisco.com/download/home
 2. Download Solarwinds Free TFTP Server and install on your PC: https://www.solarwinds.com/free-tools/free-tftp-server
 3.Open Putty and connect to your switch. Once connected run this command from the switch:
