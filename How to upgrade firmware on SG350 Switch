@@ -1,0 +1,26 @@
+How to upgrade firmware on SG350 Switch
+POSTED ON 02/12/2019
+1. Download latest firmware from https://software.cisco.com/download/home
+2. Download Solarwinds Free TFTP Server and install on your PC: https://www.solarwinds.com/free-tools/free-tftp-server
+3.Open Putty and connect to your switch. Once connected run this command from the switch:
+
+Switch1#system boot tftp://YOUR_IP/image_tesla_hybrid_2.4.5.71_release_cisco_signed.bin
+12-Feb-2019 22:33:34 %COPY-I-FILECPY: Files Copy - source URL tftp://169.254.55.38/image_tesla_hybrid_2.4.5.71_release_cisco_signed.bin destination URL flash://system/images/image_tesla_hybrid_2.4.5.71_release_cisco_signed.bin
+12-Feb-2019 22:35:33 %COPY-N-TRAP: The copy operation was completed successfully
+
+Copy: 43487307 bytes copied in 00:02:00 [hh:mm:ss]
+4. Reboot immediately or schedule a reboot with the command below:
+
+SW#reload 
+  at                   Reload at a specific time/date
+  cancel               Cancel pending reload
+  in                   Reload after a time interval
+SW#reload in 
+  <1-999>              time interval in minutes (mmm format)
+  WORD<4-6>            time interval in hours & minutes (hhh:mm format)
+
+SW#reload in 07:00 
+This command will reset the whole system and disconnect your current session. Reload is scheduled for 23:36:35 web(UTC-4) Tue Oct 31 2017 (in 7 hours). Do you want to continue ?  (Y/N)[N] Y
+
+SW#31-Oct-2017 16:36:44 %RNDMISC-N-SRACTIVE: system is scheduled to perform a restart at 23:36:35 Tue Oct 31 2017 (in 6 hours and 59 minutes).
+5. Your switch will boot up with the new firmware image
