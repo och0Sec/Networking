@@ -1,0 +1,31 @@
+#IP SLA in combination with the tracking feature helps with keeping an static route in the routing table until the track status switches from up to down.
+#The static route re-appears in the routing table when the tracking object's status changes from down to up.
+
+#Router 1 Configuration
+
+conf t
+track 6 ip sla 6 reachability
+ip sla 6
+icmp-echo 172.31.2.2 source-ip Gig0/2
+threshold 1500
+timeout 500
+frequency 5
+tos 160
+tag SD-WAN
+exit
+ip sla schedule 6 life forever start-time now
+ip route 192.168.200.0 255.255.255.0 172.31.255.2 track 6
+
+#Router 2 Configuration
+conf t
+track 6 ip sla 6 reachability
+ip sla 6
+icmp-echo 172.31.2.1 source-ip Gig0/2
+threshold 1500
+timeout 500
+frequency 5
+tos 160
+tag SD-WAN
+exit
+ip sla schedule 6 life forever start-time now
+ip route 192.168.100.0 255.255.255.0 172.31.255.1 track 6
