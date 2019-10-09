@@ -1,0 +1,20 @@
+crypto isakmp policy 10
+ hash sha256
+ authentication pre-share
+ 
+!The below password was used in a lab environment, also you probably want to explicitly specify your peer IP.
+!Please use a stronger password and specify peer IP if this is used in a production environment.
+crypto isakmp key cisco123 address 0.0.0.0        
+!
+crypto ipsec transform-set TRANSFORM-SET esp-aes esp-sha256-hmac 
+ mode tunnel
+!
+crypto ipsec profile IPSEC-PROFILE
+ set security-association lifetime seconds 28800
+ set transform-set TRANSFORM-SET 
+!
+interface Tunnel0
+ tunnel protection ipsec profile IPSEC-PROFILE
+ end
+ wr
+ 
