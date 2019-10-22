@@ -47,7 +47,9 @@ sudo apt-get dist-upgrade -y
 
 reboot
 
-sudo apt-get install -y python3-netmiko
+apt-get install python3 -y
+
+apt-get install -y python3-netmiko
 
 apt-get install python3-pip -y
 
