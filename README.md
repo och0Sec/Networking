@@ -9,9 +9,9 @@ apt-add-repository ppa:ansible/ansible
 
 press "enter" to confirm the addition of repository
 
-apt-get update
+apt-get update -y
 
-apt-get dist-upgrade -y 
+apt-get dist-upgrade -y
 
 reboot
 
@@ -24,21 +24,21 @@ apt-get dist-upgrade -y
 
 reboot
 
-apt-get install python -y
+apt-get install python 
 
-apt-get install build-essential libssl-dev libffi-dev -y
+apt-get install build-essential libssl-dev libffi-dev 
 
-apt-get install python-pip -y
+apt-get install python-pip 
 
-pip install cryptography -y
+pip install cryptography 
 
-pip install simple-crypt -y
+pip install simple-crypt 
 
-pip install pycrypto -y
+pip install pycrypto 
 
-pip install paramiko -y
+pip install paramiko 
 or
-pip install netmiko -y
+pip install netmiko 
 
 # Install Netmiko for Python 3
 sudo apt-get update -y
@@ -47,14 +47,14 @@ sudo apt-get dist-upgrade -y
 
 reboot
 
-apt-get install python3 -y
+apt-get install python3 
 
-apt-get install -y python3-netmiko
+apt-get install  python3-netmiko
 
-apt-get install python3-pip -y
+apt-get install python3-pip 
 
-pip3 install cryptography -y
+pip3 install cryptography 
 
-pip3 install simple-crypt -y
+pip3 install simple-crypt 
 
-pip3 install pycrypto -y
+pip3 install pycrypto 
