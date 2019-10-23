@@ -49,7 +49,7 @@ reboot
 
 apt-get install python3 
 
-apt-get install  python3-netmiko
+apt-get install  python3-netmiko or after installing pip3: pip3 install netmiko
 
 apt-get install python3-pip 
 
