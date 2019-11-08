@@ -25,3 +25,6 @@ def backup():
         file.write(showrun)
         file.close()
         ssh_session.disconnect()
+        
+#Call function:
+backup()
