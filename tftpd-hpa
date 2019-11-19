@@ -1,0 +1,13 @@
+# File Location: /etc/default/tftpd-hpa
+# sudo apt-get install tftpd-hpa -y
+# sudo mkdir /tftpboot
+# sudo chown -R nobody:nogroup /tftpboot
+# sudo chmod -R 777 /tftpboot
+# sudo nano /etc/default/tftpd-hpa
+# Paste the stuff below:
+# restart the service: sudo systemctl restart tftpd-hpa
+
+TFTP_USERNAME="nobody"
+TFTP_DIRECTORY="/tftpboot"
+TFTP_ADDRESS=":69"
+TFTP_OPTIONS="--secure --create"
