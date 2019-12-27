@@ -58,3 +58,15 @@ pip3 install cryptography
 pip3 install simple-crypt 
 
 pip3 install pycrypto 
+
+# Enable TextSFM
+
+pip3 install -U paramiko
+
+pip3 install -U netmiko
+
+git clone https://github.com/networktocode/ntc-templates.git
+
+export NET_TEXTFSM=/path/to/ntc-templates/templates/
+
+example usage: output = net_connect.send_command('show interface', use_textfsm=True)
