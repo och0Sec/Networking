@@ -59,7 +59,7 @@ pip3 install simple-crypt
 
 pip3 install pycrypto 
 
-# Enable TextSFM
+# Enable TextFSM
 
 pip3 install -U paramiko
 
